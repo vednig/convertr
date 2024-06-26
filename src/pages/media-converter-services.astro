@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Media Converter">
+    <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-7">
+        <nav class="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4 md:px-6 md:px-8 mx-auto" aria-label="Global">
+          <div class="md:col-span-3">
+            <!-- Logo -->
+            <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80 dark:text-white" href="/" aria-label="Preline">
+                <h1 style="display: inline" >
+                convertr
+             </h1>
+            </a>
+            <!-- End Logo -->
+          </div>
+          <!-- Button Group -->
+          <div class="flex items-center gap-x-2 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3">
+            <!-- <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border border-gray-200 text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:hover:bg-white/10 dark:text-white dark:hover:text-white">
+              Sign in
+            </button>
+            <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border border-transparent bg-lime-400 text-black hover:bg-lime-500 transition disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-lime-500">
+              Sign Up
+            </button> -->
+      
+            <div class="md:hidden">
+              <button type="button" class="hs-collapse-toggle size-[38px] flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+                <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+                <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              </button>
+            </div>
+          </div>
+          <!-- End Button Group -->
+      
+          <!-- Collapse -->
+          <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6">
+            <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
+              <div>
+                <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="/media-converter-services">Services</a>
+              </div>
+              <div>
+                <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="/about-us">About</a>
+              </div>
+              <div>
+                <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="/blog">Blog</a>
+              </div>
+            </div>
+          </div>
+          <!-- End Collapse -->
+        </nav>
+      </header>
+    <!-- Card Blog -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <!-- <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <div class="h-52 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
+<img src="data:image/png;base64,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">        </div>
+        <div class="p-4 md:p-6">
+          <span class="block mb-1 text-xs font-semibold uppercase text-blue-600 dark:text-blue-500">
+            Supported Formats jpg, png, gif, webp
+          </span>
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-300 dark:hover:text-white">
+            Image Converter
+          </h3>
+          <p class="mt-3 text-gray-500 dark:text-neutral-500">
+            Convert your images to different formats.
+        </p>
+        </div>
+        <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
+          <!-- <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            Cloud Converter
+          </a>
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            In-Browser Converter
+          </a> -->
+          <!-- <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            Go to Converter
+            </a>
+        </div>
+      </div> --> 
+      <!-- End Card -->
+  
+      <!-- Card -->
+      <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <div class="h-52 flex flex-col justify-center items-center bg-rose-500 rounded-t-xl">
+<img src="data:image/png;base64,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"></div>
+        <div class="p-4 md:p-6">
+          <span class="block mb-1 text-xs font-semibold uppercase text-rose-600 dark:text-rose-500">
+            Supported Formats mp4, avi, mov, webm
+          </span>
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-300 dark:hover:text-white">
+            Video Converter
+          </h3>
+          <p class="mt-3 text-gray-500 dark:text-neutral-500">
+            Export your videos to different formats.
+          </p>
+        </div>
+        <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
+          <!-- <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            Cloud Converter
+          </a>
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            In-Browser Converter
+          </a> -->
+   
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            Go to Converter
+          </a>
+        </div>
+      </div>
+      <!-- End Card -->
+  
+      <!-- Card -->
+      <!-- <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <div class="h-52 flex flex-col justify-center items-center bg-amber-500 rounded-t-xl">
+          <img src="data:image/png;base64,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">
+        </div>
+        <div class="p-4 md:p-6">
+          <span class="block mb-1 text-xs font-semibold uppercase text-amber-500">
+            Supported Formats doc, pdf, xls, ppt
+          </span>
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-300 dark:hover:text-white">
+            Document Converter
+          </h3>
+          <p class="mt-3 text-gray-500 dark:text-neutral-500">
+            Convert & share your documents to different formats.
+        </p>
+        </div>
+        <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700"> -->
+          <!-- <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            Cloud Converter
+          </a>
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            In-Browser Converter
+          </a> -->
+          <!-- <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            Go to Converter
+            </a>
+        </div>
+      </div> -->
+      <!-- End Card -->
+      <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+        <div class="h-52 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
+          <img src="data:image/png;base64,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">
+        </div>
+        <div class="p-4 md:p-6">
+          <span class="block mb-1 text-xs font-semibold uppercase text-blue-600 dark:text-blue-500">
+            Supported Formats mp3, wav, ogg
+          </span>
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-neutral-300 dark:hover:text-white">
+            Audio Converter
+          </h3>
+          <p class="mt-3 text-gray-500 dark:text-neutral-500">
+            Play your audio files with different formats.
+        </p>
+        </div>
+        <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
+          <!-- <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            Cloud Converter
+          </a>
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            In-Browser Converter
+          </a> -->
+          <a href="/audio-converter" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            Go to Converter
+            </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Grid -->
+  </div>
+  <!-- End Card Blog -->
+   
+</Layout>
+
+

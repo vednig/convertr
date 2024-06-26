@@ -1,0 +1,500 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const myFavouriteCities = [
+  { 
+    name: "MP4",
+  },
+  {
+    name: "AAC",
+  },
+  {
+    name: "M4A",
+  },
+  {
+    name: "MP3",
+  },
+  {
+    name: "WAV",
+  },
+  {
+    name: "FLAC",
+  },
+  {
+    name: "MPEG",
+  },
+  { 
+    name: "MP4",
+  },
+  {
+    name: "3GP",
+  },
+  {
+    name: "AA",
+  },{
+    name: "AAC",
+  },{
+    name: "AAX",
+  },{
+    name: "ACT",
+  },{
+    name: "AIFF",
+  },{
+    name: "ALAC",
+  },{
+    name: "AMR",
+  },{
+    name: "APE",
+  },{
+    name: "AU",
+  },{
+    name: "AWB",
+  },{
+    name: "DSS",
+  },{
+    name: "DVF",
+  },{
+    name: "GSM",
+  },{
+    name: "IKLAX",
+  },{
+    name: "IVS",
+  },{
+    name: "IVS",
+  },{
+    name: "M4B",
+  },
+  {
+    name: "M4P",
+  },{
+    name: "MMF",
+  },{
+    name: "MP2",
+  },{
+    name: "MPC",
+  },{
+    name: "MOVPKG",
+  },{
+    name: "MPC",
+  },{
+    name: "MSV",
+  },{
+    name: "NMF",
+  },{
+    name: "OGA",
+  },{
+    name: "MOGG",
+  },{
+    name: "OPUS",
+  },{
+    name: "RA",
+  },{
+    name: "RM",
+  },
+  {
+    name: "RAW",
+  },{
+    name: "RF64",
+  },{
+    name: "SLN",
+  },{
+    name: "TTA",
+  },{
+    name: "VOC",
+  },{
+    name: "VOX",
+  },{
+    name: "WMA",
+  },{
+    name: "WV",
+  },{
+    name: "WEBM",
+  },{
+    name: "8SVX",
+  },{
+    name: "CDA",
+  }
+]
+
+---
+
+<Layout title="Welcome to Astro.">
+  <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-7">
+    <nav class="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4 md:px-6 md:px-8 mx-auto" aria-label="Global">
+      <div class="md:col-span-3">
+      <!-- Logo -->
+      <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Preline">
+        <h1 style="display: inline" class="text-black dark:text-white">
+        <!-- <img src="https://pub-8cc0c9b4d3754a50b24444ec9eddb96b.r2.dev/icon-3c8cd1b9.png" width="48px" height="48px" alt=""> -->
+        convertr
+       </h1>
+      </a>
+      <!-- End Logo -->
+      </div>
+      <!-- Button Group -->
+      <div class="flex items-center gap-x-2 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3">
+      <!-- <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border border-gray-200 text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:hover:bg-white/10 dark:text-white dark:hover:text-white">
+        Sign in
+      </button>
+      <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border border-transparent bg-lime-400 text-black hover:bg-lime-500 transition disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-lime-500">
+      Sign Up
+      </button> -->
+    
+      <div class="md:hidden">
+        <button type="button" class="hs-collapse-toggle size-[38px] flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-black hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+        <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+        <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      </div>
+      <!-- End Button Group -->
+    
+      <!-- Collapse -->
+      <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6">
+      <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
+        <div>
+        <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="/media-converter-services">Services</a>
+        </div>
+        <div>
+        <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="/about-us">About</a>
+        </div>
+        <div>
+        <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="/blog">Blog</a>
+        </div>
+      </div>
+      </div>
+      <!-- End Collapse -->
+    </nav>
+    </header>
+    
+<div id="hs-basic-modal" data-hs-overlay-keyboard="false" class="[--overlay-backdrop:static] hs-overlay hs-overlay-open:opacity-100 hs-overlay-open:duration-500 hidden size-full fixed top-0 start-0 z-[80] opacity-0 overflow-x-hidden transition-all overflow-y-auto pointer-events-none">
+  <div class="sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+
+      
+    <div class=" max-w-max mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
+      <div class="text-center">
+        
+     <!-- Toast -->
+  <div class="max-w-max text-center bg-white border border-gray-200 rounded-xl shadow-lg dark:bg-neutral-800 dark:border-neutral-700" role="alert">
+    <div id="toast-text" class="flex items-center p-4">
+      <div class="animate-spin inline-block size-5 border-[3px] border-current border-t-transparent  text-blue-800 rounded-full" role="status" aria-label="loading">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <p  class="ms-3 text-sm text-gray-700 dark:text-neutral-400">
+        
+  
+        <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white m-2">Converting your file:</h2>
+        <ul class="max-w-md space-y-2 text-gray-500 list-inside dark:text-gray-400">
+            <li class="flex items-center" >
+                <svg id="file-scan-done" class=" w-4 h-4 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <div id="file-scan-loading" class="animate-spin inline-block size-5 border-[3px] border-current border-t-transparent  text-blue-800 rounded-full" role="status" aria-label="loading">
+                  <span class="sr-only">Loading...</span>
+                </div>
+                Scanning your file
+            </li>
+            <li class="flex items-center" id="virus-scan-text">
+                <svg id="virus-scan-done" class="hidden w-4 h-4 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <div id="virus-scan-loading" class="animate-spin inline-block size-5 border-[3px] border-current border-t-transparent  text-blue-800 rounded-full" role="status" aria-label="loading">
+                  <span class="sr-only">Loading...</span>
+                </div>
+                Checking for viruses
+            </li>
+            <li class="flex items-center" id="file-conversion">
+              <svg id="file-conversion-done" class="hidden w-4 h-4 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+              </svg>
+                <div id="file-conversion-loading" role="status" >
+                    <svg aria-hidden="true" class="w-4 h-4 me-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/><path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/></svg>
+                    <span class="sr-only">Loading...</span>
+                </div>
+                Starting file conversion
+            </li>
+        </ul>
+      </p>
+          </div>
+  </div>
+  
+  <!-- End Toast -->
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="relative">
+  
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-6xl font-bold text-gray-800 dark:text-neutral-200">
+          Choose conversion format
+        </h1>
+  
+        <p class="mt-3 text-gray-600 dark:text-neutral-400">
+
+        </p>
+  
+        <div class="mt-7 sm:mt-12 mx-auto max-w-xl relative">
+          <!-- Form -->
+          <form>
+            <div class="relative z-10 flex space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-gray-900/20">
+              <div class="flex-[1_0_0%] ">
+            <div class="relative" data-hs-combo-box="">
+              <div class="relative">
+                <input value="MP3" type="text" required placeholder="Enter a Audio Format e.g mp3,wav,m4a" class="py-3 px-4 block w-full border-blue-600 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" type="text" name="conversion_format" data-hs-combo-box-input="">
+                <div class="absolute top-1/2 end-3 -translate-y-1/2" data-hs-combo-box-toggle="">
+                  <svg class="flex-shrink-0 size-3.5 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m7 15 5 5 5-5"></path>
+                    <path d="m7 9 5-5 5 5"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="absolute z-50 w-full max-h-72 p-1 bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700" style="display: none;" data-hs-combo-box-output="">
+                {
+                  myFavouriteCities.map((data) => {
+                    return (
+                    <div class=" cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="3" data-hs-combo-box-output-item="MP3">
+                          <div class="flex justify-between items-center w-full">
+                            <span data-hs-combo-box-search-text={data.name} data-hs-combo-box-value="">{data.name}</span>
+                            <span class="hidden hs-combo-box-selected:block">
+                              <svg class="flex-shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                        )
+                        })
+      
+          }
+              </div>
+            </div>
+          </div>
+          </div>
+       
+          <!-- End Form -->
+  
+          <!-- SVG Element -->
+          <div class="hidden md:block absolute top-0 end-0 -translate-y-12 translate-x-20">
+            <svg class="w-16 h-auto text-orange-500" width="121" height="135" viewBox="0 0 121 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+              <path d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+              <path d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <!-- End SVG Element -->
+  
+          <!-- SVG Element -->
+          <div class="hidden md:block absolute bottom-0 start-0 translate-y-10 -translate-x-32">
+            <svg class="w-40 h-auto text-cyan-500" width="347" height="188" viewBox="0 0 347 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 82.4591C54.7956 92.8751 30.9771 162.782 68.2065 181.385C112.642 203.59 127.943 78.57 122.161 25.5053C120.504 2.2376 93.4028 -8.11128 89.7468 25.5053C85.8633 61.2125 130.186 199.678 180.982 146.248L214.898 107.02C224.322 95.4118 242.9 79.2851 258.6 107.02C274.299 134.754 299.315 125.589 309.861 117.539L343 93.4426" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <!-- End SVG Element -->
+        </div>
+  
+        <div class="mt-10 sm:mt-20">
+          <a onclick="document.querySelector('input[type=text]').value='M4A'" class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            M4A
+          </a>
+          <a onclick="document.querySelector('input[type=text]').value='MP3'" class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            MP3
+          </a>
+          <a onclick="document.querySelector('input[type=text]').value='WAV'" class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            WAV
+          </a>
+          <a onclick="document.querySelector('input[type=text]').value='FLAC'" class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            FLAC
+          </a>
+          <a onclick="document.querySelector('input[type=text]').value='MPEG'" class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            MPEG
+        </a>
+          <a onclick="document.querySelector('input[type=text]').value='AAC'" class="m-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800" href="#">
+            AAC
+          </a>
+        </div>
+        <!-- Subscribe -->
+<div class="max-w-6xl py-10 px-4 sm:px-6 lg:px-8 lg:py-16 mx-auto">
+  <div class="max-w-xl text-center mx-auto">
+    <div class="mb-5">
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-neutral-200">
+        Upload Audio File
+      </h1>
+    </div>
+
+      <div class="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+        <div class="w-full">
+          <input type="file" required  accept="audio/*"  class="py-3 px-4 block w-full border-blue-600 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter your email address" />
+
+      </div>
+      <div class="w-full">
+       
+    </form>
+    <button data-hs-overlay="#hs-basic-modal" id="submit" class="w-full py-3 px-4 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 dark:disabled:opacity-50 dark:disabled:pointer-events-none">
+      Upload
+    </button>
+  </div>
+</div>
+<!-- End Subscribe -->
+      </div>
+      
+    </div>
+    
+  </div>
+  <!-- End Hero -->
+  <nav class="flex space-x-6">
+    <a href="/audio-converter/mp3-to-m4a" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+      MP3 to M4A
+    </a>
+    <a href="/audio-converter/mp3-to-mp4" class="inline-flex items-center gap-x-2 text-sm font-semibold whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#" aria-current="page">
+      MP3 to MP4
+    </a>
+    <a href="/audio-converter/mp3-to-ogg" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+      MP3 to WAV
+    </a>
+    <a href="/audio-converter/mp3-to-wav" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+      MP3 to WAV
+    </a> 
+    <a href="/audio-converter/wav-to-mp3" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+      WAV to MP3
+    </a> 
+    <a href="/audio-converter/wav-to-m4a" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+      WAV to M4A
+    </a>
+  </nav>
+</Layout>
+<script>
+      const socket = new WebSocket('ws://128.168.128.171:8080/ws');
+    // Connection opened
+    socket.addEventListener('open', function (event) {
+        socket.send("Hello Server!");
+        console.log("Connected to server:", event); 
+    });
+    var fileuuid = '';
+    var prefilename = '';
+    var format = '';
+  function upload(event) {
+    event.preventDefault();
+    if(document.querySelector("input[type=file]").files.length == 0) {
+      document.getElementById("toast-text").innerHTML = '    <p class="ms-3 text-sm text-gray-700 dark:text-neutral-400">Please Select a File to Upload</p>'
+      document.querySelector('#hs-basic-modal').classList.remove('[--overlay-backdrop:static]');
+      document.querySelector('#hs-basic-modal').setAttribute('data-hs-overlay-keyboard','true')
+      return;
+    } else if(document.querySelector("input[type=text]").value==='') {
+      document.getElementById("toast-text").innerHTML = '    <p class="ms-3 text-sm text-gray-700 dark:text-neutral-400">Please Select a Format to Convert to</p>'
+      document.querySelector('#hs-basic-modal').classList.remove('[--overlay-backdrop:static]');
+      document.querySelector('#hs-basic-modal').setAttribute('data-hs-overlay-keyboard','true')
+      return;
+    }else{
+    var formdata = new FormData();
+    document.getElementById("toast-text").innerHTML = ` <div class="animate-spin inline-block size-5 border-[3px] border-current border-t-transparent  text-blue-800 rounded-full" role="status" aria-label="loading">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <p  class="ms-3 text-sm text-gray-700 dark:text-neutral-400">
+        
+  
+        <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white m-2">Converting your file:</h2>
+        <ul class="max-w-md space-y-2 text-gray-500 list-inside dark:text-gray-400">
+            <li class="flex items-center" >
+                <svg id="file-scan-done" class="hidden w-4 h-4 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <div id="file-scan-loading" role="status" >
+                    <svg aria-hidden="true" class="w-4 h-4 me-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/><path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/></svg>
+                    <span class="sr-only">Loading...</span>
+                </div>
+                Scanning your file
+            </li>
+            <li class="flex items-center" id="virus-scan-text">
+                <svg id="virus-scan-done" class="hidden w-4 h-4 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <div id="virus-scan-loading" role="status" >
+                    <svg aria-hidden="true" class="w-4 h-4 me-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/><path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/></svg>
+                    <span class="sr-only">Loading...</span>
+                </div>
+                Checking for viruses
+            </li>
+            <li class="flex items-center" id="file-conversion">
+              <svg id="file-conversion-done" class="hidden w-4 h-4 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+              </svg>
+                <div id="file-conversion-loading" role="status" >
+                    <svg aria-hidden="true" class="w-4 h-4 me-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/><path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/></svg>
+                    <span class="sr-only">Loading...</span>
+                </div>
+                Starting file conversion
+            </li>
+        </ul>
+      </p>
+    `
+    // document.querySelector('#hs-basic-modal').classList.add('[--overlay-backdrop:static]');
+    // document.querySelector('#hs-basic-modal').setAttribute('data-hs-overlay-keyboard','false')
+    formdata.append("file", document.querySelector("input[type=file]").files[0], document.querySelector("input[type=file]").files[0].name);
+    formdata.append("conversion_format", document.querySelector("input[type=text]").value);
+    format = document.querySelector("input[type=text]").value;
+    document.getElementById("submit").innerHTML  = ' <span class="animate-spin inline-block size-4 border-[3px] border-current border-t-transparent text-white rounded-full" role="status" aria-label="loading">    <span class="sr-only">Loading...</span>  </span>';
+    document.getElementById("submit").setAttribute("disabled", "disabled");
+    // SEND POST REQUEST TO UPLOAD FORM DATA
+    prefilename = document.querySelector("input[type=file]").files[0].name;
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://128.168.128.171:8080/upload", true);
+    console.log(formdata);
+    request.send(formdata);
+    setTimeout(function(){
+      document.getElementById('file-scan-loading').classList.add('hidden');
+      document.getElementById('file-scan-done').classList.remove('hidden');
+    }, 1000);
+    setTimeout(function(){
+      document.getElementById('virus-scan-loading').classList.add('hidden');
+      document.getElementById('virus-scan-done').classList.remove('hidden');
+    }, 1200);
+    // request.send(JSON.stringify({file: document.querySelector("input[type=file]").files[0]}));
+    request.onreadystatechange = function () {
+      if (request.readyState == 4 && request.status == 200) {
+        console.log(request.responseText);
+
+        fileuuid = request.responseText;
+        socket.send(prefilename)
+        document.getElementById('file-conversion-loading').classList.add('hidden');
+        document.getElementById('file-conversion-done').classList.remove('hidden');
+        document.querySelector('#hs-basic-modal').classList.remove('[--overlay-backdrop:static]');
+        document.querySelector('#hs-basic-modal').setAttribute('data-hs-overlay-keyboard','true');
+
+      }
+    }
+  }
+  }
+
+  document.getElementById("submit").addEventListener("click", upload);
+  // Connect to WebSocket
+  
+  socket.addEventListener('connect', function (event) {
+        console.log("Connected to server:", event); 
+    });
+    socket.addEventListener('message', function (event) {
+        console.log('Message from server ', event.data);
+        if (event.data=='File Conversion Complete'){
+        document.getElementById("submit").removeAttribute("disabled");
+        // document.getElementById("toast-text").innerHTML = '<div class="animate-spin inline-block size-5 border-[3px] border-current border-t-transparent  text-blue-800 rounded-full" role="status" aria-label="loading">        <span class="sr-only">Loading...</span>      </div> <p class="ms-3 text-sm text-gray-700 dark:text-neutral-400">File Conversion Successful. Starting Download</p>'
+        // document.querySelector('#hs-basic-modal').classList.remove('[--overlay-backdrop:static]');
+        // document.querySelector('#hs-basic-modal').setAttribute('data-hs-overlay-keyboard','true');
+        setTimeout(function(){
+        HSOverlay.close('#hs-basic-modal')
+                 }, 600);
+        const link = document.createElement("a");
+        // link.href = `http://`+window.location.hostname+`/download/`+prefilename+`_`+fileuuid;
+        link.href = `http://` + `128.168.128.171:8080`+`/download/`+prefilename.split('.')[0]+`_`+fileuuid+`.`+format.toLowerCase();
+        //link.download = filename;
+        link.click();
+        document.getElementById("submit").innerHTML="Upload";
+        }
+    });
+    socket.addEventListener('close', function (event) {
+        console.log('Disconnected from server ', event);
+    });
+</script>
+
+  
