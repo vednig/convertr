@@ -347,7 +347,7 @@ const myFavouriteCities = [
  
 </Layout>
 <script>
-      const socket = new WebSocket('ws://128.168.128.171:8080/ws');
+      const socket = new WebSocket('ws://api.convertr.xyz/ws');
     // Connection opened
     socket.addEventListener('open', function (event) {
         socket.send("Hello Server!");
@@ -421,7 +421,7 @@ const myFavouriteCities = [
     // SEND POST REQUEST TO UPLOAD FORM DATA
     prefilename = document.querySelector("input[type=file]").files[0].name;
     var request = new XMLHttpRequest();
-    request.open("POST", "http://128.168.128.171:8080/upload", true);
+    request.open("POST", "https://api.convertr.xyz/upload", true);
     console.log(formdata);
     request.send(formdata);
     setTimeout(function(){
@@ -467,7 +467,7 @@ const myFavouriteCities = [
                  }, 800);
         const link = document.createElement("a");
         // link.href = `http://`+window.location.hostname+`/download/`+prefilename+`_`+fileuuid;
-        link.href = `http://` + `128.168.128.171:8080`+`/download/`+prefilename.split('.')[0]+`_`+fileuuid+`.`+format.toLowerCase();
+        link.href = `https://` + `api.convertr.xyz`+`/download/`+prefilename.split('.')[0]+`_`+fileuuid+`.`+format.toLowerCase();
         //link.download = filename;
         link.click();
         document.getElementById("submit").innerHTML="Upload";

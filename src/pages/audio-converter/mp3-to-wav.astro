@@ -348,7 +348,7 @@ const myFavouriteCities = [
     <a href="/audio-converter/mp3-to-m4a" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
       MP3 to M4A
     </a>
-    <a href="/audio-converter/mp3-to-mp4" class="inline-flex items-center gap-x-2 text-sm font-semibold whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#" aria-current="page">
+    <a href="/audio-converter/mp3-to-mp4a" class="inline-flex items-center gap-x-2 text-sm font-semibold whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#" aria-current="page">
       MP3 to MP4
     </a>
     <a href="/audio-converter/mp3-to-ogg" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
@@ -366,7 +366,7 @@ const myFavouriteCities = [
   </nav>
 </Layout>
 <script>
-      const socket = new WebSocket('ws://128.168.128.171:8080/ws');
+      const socket = new WebSocket('ws://api.convertr.xyz/ws');
     // Connection opened
     socket.addEventListener('open', function (event) {
         socket.send("Hello Server!");
@@ -440,7 +440,7 @@ const myFavouriteCities = [
     // SEND POST REQUEST TO UPLOAD FORM DATA
     prefilename = document.querySelector("input[type=file]").files[0].name;
     var request = new XMLHttpRequest();
-    request.open("POST", "http://128.168.128.171:8080/upload", true);
+    request.open("POST", "https://api.convertr.xyz/upload", true);
     console.log(formdata);
     request.send(formdata);
     setTimeout(function(){
@@ -486,7 +486,7 @@ const myFavouriteCities = [
                  }, 600);
         const link = document.createElement("a");
         // link.href = `http://`+window.location.hostname+`/download/`+prefilename+`_`+fileuuid;
-        link.href = `http://` + `128.168.128.171:8080`+`/download/`+prefilename.split('.')[0]+`_`+fileuuid+`.`+format.toLowerCase();
+        link.href = `https://` + `api.convertr.xyz`+`/download/`+prefilename.split('.')[0]+`_`+fileuuid+`.`+format.toLowerCase();
         //link.download = filename;
         link.click();
         document.getElementById("submit").innerHTML="Upload";
