@@ -347,7 +347,7 @@ const myFavouriteCities = [
  
 </Layout>
 <script>
-      const socket = new WebSocket('ws://api.convertr.xyz/ws');
+      const socket = new WebSocket('wss://api.convertr.xyz/ws');
     // Connection opened
     socket.addEventListener('open', function (event) {
         socket.send("Hello Server!");
