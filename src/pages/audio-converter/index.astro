@@ -490,6 +490,12 @@ const myFavouriteCities = [
         //link.download = filename;
         link.click();
         document.getElementById("submit").innerHTML="Upload";
+        }else if(event.data=='File Conversion Incomplete, Error Occured'){
+        document.getElementById("submit").removeAttribute("disabled");
+        document.getElementById("toast-text").innerHTML = '    <p class="ms-3 text-sm text-gray-700 dark:text-neutral-400">File Conversion Incomplete, Error Occured</p>'
+        document.querySelector('#hs-basic-modal').classList.remove('[--overlay-backdrop:static]');
+        document.querySelector('#hs-basic-modal').setAttribute('data-hs-overlay-keyboard','true')
+        
         }
     });
     socket.addEventListener('close', function (event) {
