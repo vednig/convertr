@@ -467,7 +467,7 @@ const myFavouriteCities = [
                  }, 800);
         const link = document.createElement("a");
         // link.href = `http://`+window.location.hostname+`/download/`+prefilename+`_`+fileuuid;
-        link.href = `https://` + `api.convertr.xyz`+`/download/`+prefilename.split('.')[0]+`_`+fileuuid+`.`+format.toLowerCase();
+        link.href = `https://` + `api.convertr.xyz`+`/downloads/`+prefilename.split('.')[0]+`_`+fileuuid+`.`+format.toLowerCase();
         //link.download = filename;
         link.click();
         document.getElementById("submit").innerHTML="Upload";
