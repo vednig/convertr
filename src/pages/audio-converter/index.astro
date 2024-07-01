@@ -165,7 +165,7 @@ const myFavouriteCities = [
       <!-- End Collapse -->
     </nav>
     </header>
-    <!-- Modal -->
+    
 <div id="hs-basic-modal" data-hs-overlay-keyboard="false" class="[--overlay-backdrop:static] hs-overlay hs-overlay-open:opacity-100 hs-overlay-open:duration-500 hidden size-full fixed top-0 start-0 z-[80] opacity-0 overflow-x-hidden transition-all overflow-y-auto pointer-events-none">
   <div class="sm:max-w-lg sm:w-full m-3 sm:mx-auto">
 
@@ -222,8 +222,9 @@ const myFavouriteCities = [
   </div>
   </div>
 </div>
-<!-- End Modal -->
+
 <!-- Hero -->
+<div class="relative">
   
     <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
       <div class="text-center">
@@ -337,32 +338,33 @@ const myFavouriteCities = [
   </div>
 </div>
 <!-- End Subscribe -->
+<nav class="flex space-x-6">
+  <a href="/audio-converter/mp3-to-m4a" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+    MP3 to M4A
+  </a>
+  <a href="/audio-converter/mp3-to-mp4a" class="inline-flex items-center gap-x-2 text-sm font-semibold whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#" aria-current="page">
+    MP3 to MP4
+  </a>
+  <a href="/audio-converter/mp3-to-ogg" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+    MP3 to WAV
+  </a>
+  <a href="/audio-converter/mp3-to-wav" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+    MP3 to WAV
+  </a> 
+  <a href="/audio-converter/wav-to-mp3" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+    WAV to MP3
+  </a> 
+  <a href="/audio-converter/wav-to-m4a" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
+    WAV to M4A
+  </a>
+</nav>
       </div>
       
     </div>
-      </div>
+    
   </div>
   <!-- End Hero -->
-  <nav class="flex space-x-6">
-    <a href="/audio-converter/mp3-to-m4a" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
-      MP3 to M4A
-    </a>
-    <a href="/audio-converter/mp3-to-mp4a" class="inline-flex items-center gap-x-2 text-sm font-semibold whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#" aria-current="page">
-      MP3 to MP4
-    </a>
-    <a href="/audio-converter/mp3-to-ogg" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
-      MP3 to WAV
-    </a>
-    <a href="/audio-converter/mp3-to-wav" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
-      MP3 to WAV
-    </a> 
-    <a href="/audio-converter/wav-to-mp3" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
-      WAV to MP3
-    </a> 
-    <a href="/audio-converter/wav-to-m4a" class="inline-flex items-center gap-x-2 text-sm whitespace-nowrap text-blue-600 hover:text-blue-70 focus:outline-none focus:text-blue-700 dark:text-blue-500 dark:focus:text-blue-400" href="#">
-      WAV to M4A
-    </a>
-  </nav>
+
 </Layout>
 <script>
       const socket = new WebSocket('wss://api.convertr.xyz/ws');
