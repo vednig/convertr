@@ -51,7 +51,10 @@ const { title } = Astro.props;
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KL50RW0V5"></script>
 <script>
+	if (document.querySelector('input[type=text]')!==null) {
+		
 document.querySelector('input[type=text]').setAttribute("autocomplete","off")
+	}
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
